@@ -72,6 +72,7 @@
 		?>
 								</ul>
 								<ul class="nav navbar-nav navbar-right">
+									<!--
 									<li style="margin-top:10px">
 										<input type="text" class="form-control"  placeholder="Search">
 										</li>
@@ -80,8 +81,10 @@
 												<span class="glyphicon glyphicon-search"/>
 											</button>
 										</li>
+										-->
+										<?php get_search_form(); ?>
 										<li>
-											<a href="#">
+											<a href="<?php echo get_edit_user_link(); ?>">
 												<span class="glyphicon glyphicon-user"/> 我的账户</a>
 										</li>
 									</ul>

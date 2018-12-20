@@ -5,17 +5,17 @@
 
 		<div class="container-fluid">    
 			<div class="row">
-				<div class="col-lg-2">
+				<div class="col-sm-2">
 					<div class="row">
-						<div class="col-lg-2">
+						<div class="col-sm-2">
 						</div>
 						<?php get_sidebar('left');?>
 					</div>
 				</div>
-				<div class="col-lg-8"> 
+				<div class="col-sm-8"> 
 					<div class="row">
 						<?php 
-							$args = array( 'numberposts' => '6', 'order' => 'DESC','post_status' => 'publish' );
+							$args = array( 'numberposts' => '8', 'order' => 'DESC','post_status' => 'publish' );
 							$recent_posts = wp_get_recent_posts( $args );
 							foreach( $recent_posts as $recent )
 							{
@@ -25,15 +25,15 @@
 								}
 						?>
 						<a href="<?php echo get_permalink($recent['ID']); ?>">
-							<div class="col-lg-3">
-								<div class="panel panel-default">
-									<div class="panel-heading">
+							<div class="col-sm-3">
+								<div class="panel panel-default" >
+									<div class="panel-heading" style="min-height:80px">
 										<h4>
 											<?php echo $recent["post_title"]; ?>
 										</h4>
 									</div>
-									<div class="panel-body">
-										<img src="<?php echo $img_url; ?>" class="img-responsive" style="width:100%" alt="Image">
+									<div class="panel-body" >
+										<img src="<?php echo $img_url; ?>" style="height:200px" class="img-responsive" alt="Image">
 										</div>
 										<div class="panel-footer">
 											<?php echo $recent["post_excerpt"]; ?>
